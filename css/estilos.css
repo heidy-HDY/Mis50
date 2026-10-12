@@ -15,7 +15,7 @@ html {
 body {
     margin: 0;
     padding: 0;
-    background: #ffe5c6;
+    background: #ffffff;
     font-family: Arial, sans-serif;
     overflow-x: hidden;
     touch-action: pan-y;
@@ -33,7 +33,7 @@ body {
     height: 100vh;
     height: 100dvh;
 
-    background: #ffe5c6;
+    background: #ffffff;;
 
     display: flex;
     justify-content: center;
