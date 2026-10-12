@@ -209,36 +209,6 @@ body {
 }
 
 
-/* =========================================
-   BOTÓN DE MÚSICA
-   ========================================= */
-
-/*.boton-musica {
-    position: fixed;
-
-    right: 20px;
-    bottom: 20px;
-
-    width: 52px;
-    height: 52px;
-
-    border: none;
-    border-radius: 50%;
-
-    background: rgba(255, 255, 255, 0.90);
-
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.20);
-
-    font-size: 23px;
-
-    cursor: pointer;
-
-    z-index: 100;
-
-    transition:
-        transform 0.2s ease,
-        box-shadow 0.2s ease;
-}*/
 
 .boton-musica:hover {
     transform: scale(1.08);
