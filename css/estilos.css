@@ -17,7 +17,7 @@ body {
     margin: 0;
     padding: 0;
     min-height: 100dvh;
-    background: #f2b9bb;
+    background: linear-gradient(to bottom, #f6c4c6, #eeabae);
     font-family: Arial, sans-serif;
     overflow-x: hidden;
     touch-action: pan-y;
@@ -115,8 +115,8 @@ body {
 
 /* =========================================
    BOTÓN Y MENSAJE DE MÚSICA
-   (deja aquí tu bloque .boton-musica original
-    con position, colores, etc.)
+   (si tienes el bloque base de .boton-musica con
+    position, colores, etc., consérvalo aquí)
    ========================================= */
 
 .boton-musica:hover  { transform: scale(1.08); }
@@ -159,31 +159,36 @@ body {
 
 
 /* =========================================
-   CELULARES: INVITACIÓN A PANTALLA COMPLETA
+   CELULARES
    ========================================= */
 
 @media (max-width: 600px) {
 
-    .sobre { padding: 15px; }
-    .sobre-imagen { max-width: 90vw; max-height: 55vh; }
+    /* Centra la invitación verticalmente */
+    body {
+        display: flex;
+        align-items: center;
+        background: linear-gradient(to bottom, #f6c4c6, #eeabae);
+    }
 
+    /* Ancho completo de pantalla: se ve todo el texto */
     .invitacion {
-        /* proporción real de tu imagen: ancho / alto */
-        --ratio: 0.71;
-
+        flex-shrink: 0;
+        width: 100vw;          /* si la quieres un poco más pequeña: 96vw */
         max-width: none;
-        width: max(100vw, calc(100dvh * var(--ratio)));
         aspect-ratio: 1080 / 1520;
         margin: 0;
-        position: relative;
-        left: 50%;
-        transform: translateX(-50%);
+        left: auto;
+        transform: none;
     }
 
     .invitacion-imagen {
         width: 100%;
         height: 100%;
     }
+
+    .sobre { padding: 15px; }
+    .sobre-imagen { max-width: 90vw; max-height: 55vh; }
 
     .boton-musica {
         width: 48px;
@@ -200,9 +205,19 @@ body {
     }
 }
 
+
+/* =========================================
+   CELULARES PEQUEÑOS
+   ========================================= */
+
 @media (max-width: 400px) {
     .sobre-imagen { max-width: 92vw; max-height: 52vh; }
 }
+
+
+/* =========================================
+   CELULARES MUY PEQUEÑOS
+   ========================================= */
 
 @media (max-width: 360px) {
     .sobre-imagen { max-width: 94vw; max-height: 50vh; }
